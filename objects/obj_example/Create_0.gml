@@ -62,10 +62,12 @@ if (_scratch_game != "") {
     FreeExecutedProcessStandardOutput(_proc_id);
     FreeExecutedProcessStandardInput(_proc_id);
   } else if (os_type == os_linux) {
-    var _proc_id = ProcessExecute("chmod u+x \"" + working_directory + string_lower("ScratchEverywhere/ScratchEverywhere.AppImage") + "\"");
+    directory_create(game_save_id);
+    directory_copy(working_directory + string_lower("ScratchEverywhere"), game_save_id + string_lower("ScratchEverywhere"));
+    var _proc_id = ProcessExecute("chmod u+x \"" + game_save_id + string_lower("ScratchEverywhere/ScratchEverywhere.AppImage") + "\"");
     FreeExecutedProcessStandardOutput(_proc_id);
     FreeExecutedProcessStandardInput(_proc_id);
-    _proc_id = ProcessExecute("\"" + working_directory + string_lower("ScratchEverywhere/ScratchEverywhere.AppImage") + "\" \"" + _scratch_game + "\"");
+    _proc_id = ProcessExecute("\"" + game_save_id + string_lower("ScratchEverywhere/ScratchEverywhere.AppImage") + "\" \"" + _scratch_game + "\"");
     FreeExecutedProcessStandardOutput(_proc_id);
     FreeExecutedProcessStandardInput(_proc_id);
   }
