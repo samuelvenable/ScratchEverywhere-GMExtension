@@ -185,7 +185,7 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"155-NotoSansKR-Regular.otf","CopyToMask":-1,"filePath":"datafiles/OpenDialogFonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"156-NotoSansSC-Regular.otf","CopyToMask":-1,"filePath":"datafiles/OpenDialogFonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"157-NotoSansHK-Regular.otf","CopyToMask":-1,"filePath":"datafiles/OpenDialogFonts",},
-    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"NotoSans-License.txt","CopyToMask":-1,"filePath":"datafiles/OpenDialogFonts",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"Noto-License.txt","CopyToMask":-1,"filePath":"datafiles/OpenDialogFonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"Roboto-License.txt","CopyToMask":-1,"filePath":"datafiles/OpenDialogFonts",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"ScratchEverywhere-License.txt","CopyToMask":194,"filePath":"datafiles/ScratchEverywhere",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"ScratchEverywhere.AppImage","CopyToMask":128,"filePath":"datafiles/ScratchEverywhere",},
