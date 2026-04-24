@@ -1,0 +1,8 @@
+{
+  "FolderOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"libfiledialogs","order":3,"path":"extensions/libfiledialogs/libfiledialogs.yy",},
+    {"name":"libxprocess","order":1,"path":"extensions/libxprocess/libxprocess.yy",},
+    {"name":"libzoom","order":2,"path":"extensions/libzoom/libzoom.yy",},
+  ],
+}
