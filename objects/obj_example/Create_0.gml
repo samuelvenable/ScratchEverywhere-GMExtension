@@ -51,7 +51,7 @@ if (os_type == os_windows) {
 var _scratch_game = "";
 if (parameter_count() == 2) {
   _scratch_game = parameter_string(1);
-} else if (parameter_count() == 1) {
+} else {
   _scratch_game = GetOpenFileName("Scratch Game Files (*.sb3)|*.sb3", "", "", "Select a Scratch *.sb3 Game File to play...");
 }
 
