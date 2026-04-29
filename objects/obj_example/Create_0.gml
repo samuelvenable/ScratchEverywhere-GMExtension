@@ -42,9 +42,9 @@ DialogSetFontSize(20);
 
 // Set Folder to Load All Fonts (Not Recursive):
 if (os_type == os_windows) {
-  DialogSetFontFolder(working_directory + "OpenDialogFonts");
-} else if (os_type == os_linux) {
-  DialogSetFontFolder(working_directory + string_lower("OpenDialogFonts"));
+  DialogSetFontFolder(working_directory + "Fonts");
+} else if (os_type == os_macosx || os_type == os_linux) {
+  DialogSetFontFolder(working_directory + string_lower("Fonts"));
 }
 
 // Open Scratch Game:
@@ -59,6 +59,20 @@ if (parameter_count() == 2) {
 if (_scratch_game != "") {
   if (os_type == os_windows) {
     var _proc_id = ProcessExecute("\"" + working_directory + "ScratchEverywhere/ScratchEverywhere.exe\" \"" + _scratch_game + "\"");
+    FreeExecutedProcessStandardOutput(_proc_id);
+    FreeExecutedProcessStandardInput(_proc_id);
+  } else if (os_type == os_macosx) {
+    directory_create(game_save_id);
+    directory_create(game_save_id + string_lower("ScratchEverywhere"));
+    file_copy(working_directory + string_lower("ScratchEverywhere/ScratchEverywhere"), game_save_id + string_lower("ScratchEverywhere/ScratchEverywhere"));
+    file_copy(working_directory + string_lower("ScratchEverywhere/ScratchEverywhere-License.txt"), game_save_id + string_lower("ScratchEverywhere/ScratchEverywhere-License.txt"));
+    var _proc_id = ProcessExecute("chmod u+x \"" + game_save_id + string_lower("ScratchEverywhere/ScratchEverywhere") + "\"");
+    FreeExecutedProcessStandardOutput(_proc_id);
+    FreeExecutedProcessStandardInput(_proc_id);
+    _proc_id = ProcessExecute("xattr -r -d com.apple.quarantine \"" + game_save_id + string_lower("ScratchEverywhere/ScratchEverywhere") + "\"");
+    FreeExecutedProcessStandardOutput(_proc_id);
+    FreeExecutedProcessStandardInput(_proc_id);
+    _proc_id = ProcessExecute("\"" + game_save_id + string_lower("ScratchEverywhere/ScratchEverywhere") + "\" \"" + _scratch_game + "\"");
     FreeExecutedProcessStandardOutput(_proc_id);
     FreeExecutedProcessStandardInput(_proc_id);
   } else if (os_type == os_linux) {
