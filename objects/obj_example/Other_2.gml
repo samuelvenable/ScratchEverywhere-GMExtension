@@ -53,7 +53,7 @@ var _scratch_game = "";
 if (parameter_count() == 2) {
   _scratch_game = parameter_string(1);
 } else {
-  _scratch_game = GetOpenFileName("Scratch Game Files (*.sb3)|*.sb3", "appel_v1.4.sb3", working_directory + "ScratchGames", "Select a Scratch *.sb3 Game File to play...");
+  _scratch_game = GetOpenFileName("Scratch Game Files (*.sb3)|*.sb3", string_lower("Appel.sb3"), working_directory + string_lower("Games"), "Select a Scratch *.sb3 Game File to play...");
 }
 
 // Run Scratch Everywhere!
