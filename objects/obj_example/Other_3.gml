@@ -1,0 +1,1 @@
+scratch_everywhere_destroy();

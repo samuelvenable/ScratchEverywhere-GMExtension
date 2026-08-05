@@ -2,7 +2,8 @@
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
     {"name":"libfiledialogs","order":3,"path":"extensions/libfiledialogs/libfiledialogs.yy",},
-    {"name":"libxprocess","order":1,"path":"extensions/libxprocess/libxprocess.yy",},
+    {"name":"libscratch","order":4,"path":"extensions/libscratch/libscratch.yy",},
+    {"name":"libborderless","order":5,"path":"extensions/libborderless/libborderless.yy",},
     {"name":"libzoom","order":2,"path":"extensions/libzoom/libzoom.yy",},
   ],
 }
