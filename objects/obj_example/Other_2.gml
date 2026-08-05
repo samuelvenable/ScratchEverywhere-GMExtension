@@ -1,5 +1,7 @@
 // Scratch Official Website:
 // https://scratch.mit.edu/
+// Scratch Everywhere! Official Website:
+// https://scratcheverywhere.github.io/
 
 // Ubuntu export needs packages installed to work
 // Run the following terminal command to install:
