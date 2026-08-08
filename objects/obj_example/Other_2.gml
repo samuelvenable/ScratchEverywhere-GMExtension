@@ -55,7 +55,11 @@ var _scratch_game = "";
 if (parameter_count() == 2) {
   _scratch_game = parameter_string(1);
 } else {
-  _scratch_game = GetOpenFileName("Scratch Game Files (*.sb3)|*.sb3", string_lower("Appel.sb3"), working_directory + string_lower("Games"), "Select a Scratch *.sb3 Game File to play...");
+  if (os_type == os_windows) {
+    _scratch_game = GetOpenFileName("Scratch Game Files (*.sb3)|*.sb3", "Appel.sb3", working_directory + "Games", "Select a Scratch *.sb3 Game File to play...");
+  } else if (os_type == os_macosx || os_type == os_linux) {
+    _scratch_game = GetOpenFileName("Scratch Game Files (*.sb3)|*.sb3", string_lower("Appel.sb3"), working_directory + string_lower("Games"), "Select a Scratch *.sb3 Game File to play...");
+  }
 }
 
 // Run Scratch Everywhere!
