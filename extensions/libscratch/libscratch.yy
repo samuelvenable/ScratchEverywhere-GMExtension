@@ -21,7 +21,10 @@
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libscratch.dylib","constants":[],"copyToTargets":194,"filename":"libscratch.dylib","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_create","argCount":0,"args":[
             1,
-          ],"documentation":"","externalName":"scratch_everywhere_create","help":"scratch_everywhere_create(sb3)","hidden":false,"kind":1,"returnType":2,},
+            2,
+            2,
+            1,
+          ],"documentation":"","externalName":"scratch_everywhere_create","help":"scratch_everywhere_create(sb3,width,height,title)","hidden":false,"kind":1,"returnType":2,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_step","argCount":0,"args":[],"documentation":"","externalName":"scratch_everywhere_step","help":"scratch_everywhere_step()","hidden":false,"kind":1,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_destroy","argCount":0,"args":[],"documentation":"","externalName":"scratch_everywhere_destroy","help":"scratch_everywhere_destroy()","hidden":false,"kind":1,"returnType":2,},
       ],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},

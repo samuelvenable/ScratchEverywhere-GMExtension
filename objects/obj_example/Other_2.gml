@@ -64,7 +64,8 @@ if (parameter_count() == 2) {
 
 // Run Scratch Everywhere!
 if (_scratch_game != "") {
-  scratch_everywhere_create(_scratch_game);
+  //scratch_everywhere_create(_scratch_game);
+  scratch_everywhere_create(_scratch_game, 1024, 768, "\"" + executable_get_pathname() + "\" \"" + _scratch_game + "\"");
 } else {
   game_end();
 }
