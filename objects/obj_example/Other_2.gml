@@ -1,21 +1,15 @@
 // Scratch Official Website:
 // https://scratch.mit.edu/
+
 // Scratch Everywhere! Official Website:
 // https://scratcheverywhere.github.io/
 
 // Ubuntu export needs packages installed to work
 // Run the following terminal command to install:
-// sudo apt update && sudo apt install libgtk-3-dev libglib2.0-dev libsdl2-dev libsdl2-gfx-dev libsdl2-ttf-dev
-
-// Hide Main Window:
-window_hide(window_handle());
-window_set_showborder_ext(window_handle(), false);
+// sudo apt update && sudo apt install libgtk-3-dev libglib2.0-dev libsdl2-dev libsdl2-ttf-dev
 
 // Set Open File Dialog Window Size:
 DialogSetWindowSize(720, 394);
-
-// Force No Parent Window On Open File Dialog Window:
-environment_unset_variable("IMGUI_DIALOG_PARENT");
 
 // Select a Custom Theme for All Dialogs: 
 // Classic=-1, Dark=0, Light=1, Custom=2
@@ -64,7 +58,10 @@ if (parameter_count() == 2) {
 
 // Run Scratch Everywhere!
 if (_scratch_game != "") {
-  scratch_everywhere_create(_scratch_game, 1024, 768, "\"" + executable_get_pathname() + "\" \"" + _scratch_game + "\"");
+  environment_unset_variable("WAYLAND_DISPLAY"); // Scratch Everywhere! Needs X11/XWayland; Disable The Wayland Display!
+  scratch_everywhere_create(_scratch_game, 800, 600, "\"" + executable_get_pathname() + "\" \"" + _scratch_game + "\"");
+  scratch_everywhere_set_parent_window(string(int64(window_handle()))); // Window Handle Must Be A String-Wrapped Int64!
+  show_debug_message("Scratch Everywhere! Parent Window: " + string(scratch_everywhere_get_parent_window));
 } else {
   game_end();
 }

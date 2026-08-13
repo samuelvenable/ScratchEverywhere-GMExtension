@@ -203,8 +203,6 @@
     {"id":{"name":"libfiledialogs","path":"extensions/libfiledialogs/libfiledialogs.yy",},},
     {"id":{"name":"fnt_example","path":"fonts/fnt_example/fnt_example.yy",},},
     {"id":{"name":"libscratch","path":"extensions/libscratch/libscratch.yy",},},
-    {"id":{"name":"libborderless","path":"extensions/libborderless/libborderless.yy",},},
-    {"id":{"name":"libzoom","path":"extensions/libzoom/libzoom.yy",},},
     {"id":{"name":"rm_example","path":"rooms/rm_example/rm_example.yy",},},
   ],
   "RoomOrderNodes": [
