@@ -59,22 +59,18 @@ if (parameter_count() == 2) {
 // Run Scratch Everywhere!
 if (_scratch_game != "") {
   environment_unset_variable("WAYLAND_DISPLAY"); // Scratch Everywhere! Needs X11/XWayland; Disable the Wayland Display!
-  scratch_everywhere_create(_scratch_game, 640, 480, "\"" + executable_get_pathname() + "\" \"" + _scratch_game + "\"");
+  scratch_everywhere_set_is_blocking(true); // Force Scratch Everywhere! to Run in Blocking Mode; Required for GameMaker
   scratch_everywhere_set_parent_window(string(int64(window_handle()))); // Window Handle must be a String-Wrapped Int64!
-  show_debug_message("Scratch Everywhere! Parent Window: " + string(scratch_everywhere_get_parent_window));
+  scratch_everywhere_create(_scratch_game, 640, 480, "\"" + executable_get_pathname() + "\" \"" + _scratch_game + "\"");
   /** 
    * scratch_everywhere_step() returns bool:bool
    * first bool is whether to continue main loop
    * second bool is whether it exited with error
    */
-  var _code = "1:0";
-  while (true) {
-    _code = string_split(scratch_everywhere_step(), ":", true, 1);
-    if (_code[0] != undefined && !bool(int64((_code[0])))) {
-      instance_destroy();
-      game_end();
-      break;
-    }
+  var _code = string_split(scratch_everywhere_step(), ":", true, 1);
+  if (_code[0] != undefined && !bool(int64((_code[0])))) {
+    instance_destroy();
+    game_end();
   }
 } else {
   game_end();

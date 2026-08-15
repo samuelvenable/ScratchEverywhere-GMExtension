@@ -31,6 +31,10 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_set_parent_window","argCount":0,"args":[
             1,
           ],"documentation":"","externalName":"scratch_everywhere_set_parent_window","help":"scratch_everywhere_set_parent_window(window)","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_get_is_blocking","argCount":0,"args":[],"documentation":"","externalName":"scratch_everywhere_get_is_blocking","help":"scratch_everywhere_get_is_blocking()","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_set_is_blocking","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"scratch_everywhere_set_is_blocking","help":"scratch_everywhere_set_is_blocking(blocking)","hidden":false,"kind":1,"returnType":2,},
       ],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libsdl2_ttf.dylib","constants":[],"copyToTargets":2,"filename":"libsdl2_ttf.dylib","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libsdl2.dylib","constants":[],"copyToTargets":2,"filename":"libsdl2.dylib","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
