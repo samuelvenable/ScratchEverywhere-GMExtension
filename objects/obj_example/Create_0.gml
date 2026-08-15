@@ -9,7 +9,7 @@
 // sudo apt update && sudo apt install libgtk-3-dev libglib2.0-dev libsdl2-dev libsdl2-ttf-dev
 
 // Set Open File Dialog Window Size:
-DialogSetWindowSize(720, 394);
+DialogSetWindowSize(640, 480);
 
 // Select a Custom Theme for All Dialogs: 
 // Classic=-1, Dark=0, Light=1, Custom=2
@@ -58,10 +58,24 @@ if (parameter_count() == 2) {
 
 // Run Scratch Everywhere!
 if (_scratch_game != "") {
-  environment_unset_variable("WAYLAND_DISPLAY"); // Scratch Everywhere! Needs X11/XWayland; Disable The Wayland Display!
-  scratch_everywhere_create(_scratch_game, 800, 600, "\"" + executable_get_pathname() + "\" \"" + _scratch_game + "\"");
-  scratch_everywhere_set_parent_window(string(int64(window_handle()))); // Window Handle Must Be A String-Wrapped Int64!
+  environment_unset_variable("WAYLAND_DISPLAY"); // Scratch Everywhere! Needs X11/XWayland; Disable the Wayland Display!
+  scratch_everywhere_create(_scratch_game, 640, 480, "\"" + executable_get_pathname() + "\" \"" + _scratch_game + "\"");
+  scratch_everywhere_set_parent_window(string(int64(window_handle()))); // Window Handle must be a String-Wrapped Int64!
   show_debug_message("Scratch Everywhere! Parent Window: " + string(scratch_everywhere_get_parent_window));
+  /** 
+   * scratch_everywhere_step() returns bool:bool
+   * first bool is whether to continue main loop
+   * second bool is whether it exited with error
+   */
+  var _code = "1:0";
+  while (true) {
+    _code = string_split(scratch_everywhere_step(), ":", true, 1);
+    if (_code[0] != undefined && !bool(int64((_code[0])))) {
+      instance_destroy();
+      game_end();
+      break;
+    }
+  }
 } else {
   game_end();
 }

@@ -197,14 +197,14 @@
     "IDEVersion": "2023.11.0.121",
   },
   "resources": [
-    {"id":{"name":"obj_loading","path":"objects/obj_loading/obj_loading.yy",},},
     {"id":{"name":"obj_example","path":"objects/obj_example/obj_example.yy",},},
-    {"id":{"name":"spr_example","path":"sprites/spr_example/spr_example.yy",},},
     {"id":{"name":"scr_example","path":"scripts/scr_example/scr_example.yy",},},
     {"id":{"name":"libfilesystem","path":"extensions/libfilesystem/libfilesystem.yy",},},
     {"id":{"name":"libfiledialogs","path":"extensions/libfiledialogs/libfiledialogs.yy",},},
     {"id":{"name":"fnt_example","path":"fonts/fnt_example/fnt_example.yy",},},
     {"id":{"name":"libscratch","path":"extensions/libscratch/libscratch.yy",},},
+    {"id":{"name":"obj_loading","path":"objects/obj_loading/obj_loading.yy",},},
+    {"id":{"name":"spr_example","path":"sprites/spr_example/spr_example.yy",},},
     {"id":{"name":"rm_example","path":"rooms/rm_example/rm_example.yy",},},
   ],
   "RoomOrderNodes": [

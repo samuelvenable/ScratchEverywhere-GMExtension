@@ -1,8 +1,8 @@
 {
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
-    {"name":"obj_loading","order":1,"path":"objects/obj_loading/obj_loading.yy",},
     {"name":"libfiledialogs","order":3,"path":"extensions/libfiledialogs/libfiledialogs.yy",},
     {"name":"libscratch","order":4,"path":"extensions/libscratch/libscratch.yy",},
+    {"name":"obj_loading","order":1,"path":"objects/obj_loading/obj_loading.yy",},
   ],
 }
