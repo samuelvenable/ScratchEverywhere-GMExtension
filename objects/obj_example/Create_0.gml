@@ -61,7 +61,7 @@ if (_scratch_game != "") {
   environment_unset_variable("WAYLAND_DISPLAY"); // Scratch Everywhere! Needs X11/XWayland; Disable the Wayland Display!
   scratch_everywhere_set_is_blocking(true); // Force Scratch Everywhere! to Run in Blocking Mode; Required for GameMaker
   scratch_everywhere_set_parent_window(string(int64(window_handle()))); // Window Handle must be a String-Wrapped Int64!
-  scratch_everywhere_create(_scratch_game, 640, 480, "\"" + executable_get_pathname() + "\" \"" + _scratch_game + "\"");
+  scratch_everywhere_create(_scratch_game, 640, 480,  filename_name(_scratch_game));
   /** 
    * scratch_everywhere_step() returns bool:bool
    * first bool is whether to continue main loop
