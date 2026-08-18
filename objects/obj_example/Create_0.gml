@@ -59,19 +59,21 @@ if (parameter_count() == 2) {
 // Run Scratch Everywhere!
 if (_scratch_game != "") {
   environment_unset_variable("WAYLAND_DISPLAY"); // Scratch Everywhere! Needs X11/XWayland; Disable the Wayland Display!
-  scratch_everywhere_set_is_blocking(true); // Force Scratch Everywhere! to Run in Blocking Mode; Required for GameMaker
   scratch_everywhere_set_parent_window(string(int64(window_handle()))); // Window Handle must be a String-Wrapped Int64!
-  scratch_everywhere_create(_scratch_game, 640, 480, filename_name(_scratch_game));
+  var _scratch_everywhere_window = scratch_everywhere_create(_scratch_game, 640, 480, filename_name(_scratch_game));
   /** 
    * scratch_everywhere_step() returns bool:bool
    * first bool is whether to continue main loop
    * second bool is whether it exited with error
    */
-  var _code = string_split(scratch_everywhere_step(), ":", true, 1);
-  if (_code[0] != undefined && !bool(int64((_code[0])))) {
-    instance_destroy();
-    game_end();
+  while (true) {
+    var _code = string_split(scratch_everywhere_step(), ":", true, 1);
+    if (_code[0] != undefined && !bool(int64((_code[0])))) {
+      // Wrap Things Up:
+	  scratch_everywhere_destroy();
+    }
   }
-} else {
-  game_end();
 }
+
+// Open File Dialog Canceled:
+game_end();
