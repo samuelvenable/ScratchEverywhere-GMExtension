@@ -58,9 +58,10 @@ if (parameter_count() == 2) {
 
 // Run Scratch Everywhere!
 if (_scratch_game != "") {
+  window_set_caption(filename_name(_scratch_game));
   environment_unset_variable("WAYLAND_DISPLAY"); // Scratch Everywhere! Needs X11/XWayland; Disable the Wayland Display!
   scratch_everywhere_set_parent_window(string(int64(window_handle()))); // Window Handle must be a String-Wrapped Int64!
-  var _scratch_everywhere_window = scratch_everywhere_create(_scratch_game, 640, 480, filename_name(_scratch_game));
+  var _scratch_everywhere_window = scratch_everywhere_create(_scratch_game, 640, 480, window_get_caption());
   /** 
    * scratch_everywhere_step() returns bool:bool
    * first bool is whether to continue main loop
@@ -70,7 +71,7 @@ if (_scratch_game != "") {
     var _code = string_split(scratch_everywhere_step(), ":", true, 1);
     if (_code[0] != undefined && !bool(int64((_code[0])))) {
       // Wrap Things Up:
-	  scratch_everywhere_destroy();
+      scratch_everywhere_destroy();
     }
   }
 }
