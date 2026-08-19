@@ -60,8 +60,8 @@ if (parameter_count() == 2) {
 if (_scratch_game != "") {
   window_set_caption(filename_name(_scratch_game));
   environment_unset_variable("WAYLAND_DISPLAY"); // Scratch Everywhere! Needs X11/XWayland; Disable the Wayland Display!
-  scratch_everywhere_set_parent_window(string(int64(window_handle()))); // Window Handle must be a String-Wrapped Int64!
-  var _scratch_everywhere_window = scratch_everywhere_create(_scratch_game, 640, 480, window_get_caption());
+  // The Window Handle Argument must be a String-Wrapped Int64 - Use string(int64(window_handle())) for the Game Window:
+  var _scratch_everywhere_window = scratch_everywhere_create(_scratch_game, window_get_caption(), string(int64(window_handle())));
   /** 
    * scratch_everywhere_step() returns bool:bool
    * first bool is whether to continue main loop
