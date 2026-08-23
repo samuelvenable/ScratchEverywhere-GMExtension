@@ -7,7 +7,7 @@
 // Set Open File Dialog Window Size:
 DialogSetWindowSize(640, 480);
 
-// Select a Custom Theme for All Dialogs: 
+// Select a Custom Theme for Open File Dialog: 
 // Classic=-1, Dark=0, Light=1, Custom=2
 // Example themes -1 to 1 are from ImGui
 environment_set_variable("IMGUI_DIALOG_THEME", string(2));
