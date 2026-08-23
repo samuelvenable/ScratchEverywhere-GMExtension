@@ -59,7 +59,6 @@ if (parameter_count() == 2) {
 // Run Scratch Everywhere!
 if (_scratch_game != "") {
   window_set_caption(filename_name(_scratch_game));
-  environment_unset_variable("WAYLAND_DISPLAY"); // Scratch Everywhere! Needs X11/XWayland; Disable the Wayland Display!
   // The Window Handle Argument must be a String-Wrapped Int64 - Use string(int64(window_handle())) for the Game Window:
   var _scratch_everywhere_window = scratch_everywhere_create(_scratch_game, window_get_caption(), string(int64(window_handle())));
   /** 
