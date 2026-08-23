@@ -12,13 +12,13 @@
   "androidsourcedir": "",
   "author": "",
   "classname": "",
-  "copyToTargets": 194,
+  "copyToTargets": 66,
   "date": "2026-08-04T23:38:54.069577-04:00",
   "description": "",
   "exportToGame": true,
   "extensionVersion": "0.0.1",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libscratch.dylib","constants":[],"copyToTargets":194,"filename":"libscratch.dylib","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libscratch.dylib","constants":[],"copyToTargets":66,"filename":"libscratch.dylib","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_create","argCount":0,"args":[
             1,
             1,
@@ -28,7 +28,6 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_destroy","argCount":0,"args":[],"documentation":"","externalName":"scratch_everywhere_destroy","help":"scratch_everywhere_destroy()","hidden":false,"kind":1,"returnType":2,},
       ],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[
         {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"libscratch.dll","TargetMask":6,},
-        {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"libscratch.so","TargetMask":7,},
       ],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libsdl2_ttf.dylib","constants":[],"copyToTargets":2,"filename":"libsdl2_ttf.dylib","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libsdl2.dylib","constants":[],"copyToTargets":2,"filename":"libsdl2.dylib","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
