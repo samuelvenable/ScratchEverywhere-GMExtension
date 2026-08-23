@@ -4,10 +4,6 @@
 // Scratch Everywhere! Official Website:
 // https://scratcheverywhere.github.io/
 
-// Ubuntu export needs packages installed to work
-// Run the following terminal command to install:
-// sudo apt update && sudo apt install libgtk-3-dev libglib2.0-dev libsdl2-dev libsdl2-ttf-dev
-
 // Set Open File Dialog Window Size:
 DialogSetWindowSize(640, 480);
 
