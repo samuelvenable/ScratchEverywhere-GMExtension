@@ -4,10 +4,6 @@
 // Scratch Everywhere! Official Website:
 // https://scratcheverywhere.github.io/
 
-// Ubuntu export needs packages installed to work
-// Run the following terminal command to install:
-// sudo apt update && sudo apt install libgtk-3-dev libglib2.0-dev libsdl2-dev libsdl2-ttf-dev
-
 // Set Open File Dialog Window Size:
 DialogSetWindowSize(window_get_width(), window_get_height());
 
@@ -62,7 +58,7 @@ if (_scratch_game != "") {
   scratch_everywhere_set_caption(filename_name(_scratch_game));
   scratch_everywhere_set_size(window_get_width(), window_get_height());
   var _scratch_everywhere_owner_window = string(int64(window_handle()));
-  scratch_everywhere_set_owner( _scratch_everywhere_owner_window);
+  scratch_everywhere_set_owner(_scratch_everywhere_owner_window);
   var _scratch_everywhere_window = scratch_everywhere_create(_scratch_game);
   /** 
    * scratch_everywhere_step() returns bool:bool
