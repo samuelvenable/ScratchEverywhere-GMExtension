@@ -21,18 +21,30 @@
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libscratch.dylib","constants":[],"copyToTargets":66,"filename":"libscratch.dylib","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_create","argCount":0,"args":[
             1,
-            1,
-            1,
-          ],"documentation":"","externalName":"scratch_everywhere_create","help":"scratch_everywhere_create(sb3,title,window)","hidden":false,"kind":1,"returnType":1,},
+          ],"documentation":"","externalName":"scratch_everywhere_create","help":"scratch_everywhere_create(sb3)","hidden":false,"kind":1,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_step","argCount":0,"args":[],"documentation":"","externalName":"scratch_everywhere_step","help":"scratch_everywhere_step()","hidden":false,"kind":1,"returnType":1,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_destroy","argCount":0,"args":[],"documentation":"","externalName":"scratch_everywhere_destroy","help":"scratch_everywhere_destroy()","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_get_width","argCount":0,"args":[],"documentation":"","externalName":"scratch_everywhere_get_width","help":"scratch_everywhere_get_width()","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_get_height","argCount":0,"args":[],"documentation":"","externalName":"scratch_everywhere_get_height","help":"scratch_everywhere_get_height()","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_set_size","argCount":0,"args":[
+            2,
+            2,
+          ],"documentation":"","externalName":"scratch_everywhere_set_size","help":"scratch_everywhere_set_size(width,height)","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_get_resizable","argCount":0,"args":[],"documentation":"","externalName":"scratch_everywhere_get_resizable","help":"scratch_everywhere_get_resizable()","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_set_resizable","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"scratch_everywhere_set_resizable","help":"scratch_everywhere_set_resizable(resizable)","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_get_caption","argCount":0,"args":[],"documentation":"","externalName":"scratch_everywhere_get_caption","help":"scratch_everywhere_get_caption()","hidden":false,"kind":1,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_set_caption","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"scratch_everywhere_set_caption","help":"scratch_everywhere_set_caption(caption)","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_get_owner","argCount":0,"args":[],"documentation":"","externalName":"scratch_everywhere_get_owner","help":"scratch_everywhere_get_owner()","hidden":false,"kind":1,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"scratch_everywhere_set_owner","argCount":0,"args":[
+            1,
+          ],"documentation":"","externalName":"scratch_everywhere_set_owner","help":"scratch_everywhere_set_owner(owner)","hidden":false,"kind":1,"returnType":2,},
       ],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[
         {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"libscratch.dll","TargetMask":6,},
       ],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libsdl2_ttf.dylib","constants":[],"copyToTargets":2,"filename":"libsdl2_ttf.dylib","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libsdl2.dylib","constants":[],"copyToTargets":2,"filename":"libsdl2.dylib","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libfreetype.dylib","constants":[],"copyToTargets":2,"filename":"libfreetype.dylib","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libpng.dylib","constants":[],"copyToTargets":2,"filename":"libpng.dylib","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libscratch.zip","constants":[],"copyToTargets":0,"filename":"libscratch.zip","final":"","functions":[],"init":"","kind":4,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libbrotlicommon.dll","constants":[],"copyToTargets":64,"filename":"libbrotlicommon.dll","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libbrotlidec.dll","constants":[],"copyToTargets":64,"filename":"libbrotlidec.dll","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
@@ -51,6 +63,10 @@
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libglib-2.0-0.dll","constants":[],"copyToTargets":64,"filename":"libglib-2.0-0.dll","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"SDL2.dll","constants":[],"copyToTargets":64,"filename":"SDL2.dll","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libstdc++-6.dll","constants":[],"copyToTargets":64,"filename":"libstdc++-6.dll","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libsdl2.dylib","constants":[],"copyToTargets":2,"filename":"libsdl2.dylib","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libsdl2_ttf.dylib","constants":[],"copyToTargets":2,"filename":"libsdl2_ttf.dylib","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libfreetype.dylib","constants":[],"copyToTargets":2,"filename":"libfreetype.dylib","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libpng.dylib","constants":[],"copyToTargets":2,"filename":"libpng.dylib","final":"","functions":[],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
   "gradleinject": "",
   "hasConvertedCodeInjection": true,

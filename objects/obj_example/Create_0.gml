@@ -5,7 +5,7 @@
 // https://scratcheverywhere.github.io/
 
 // Set Open File Dialog Window Size:
-DialogSetWindowSize(640, 480);
+DialogSetWindowSize(window_get_width(), window_get_height());
 
 // Select a Custom Theme for Open File Dialog: 
 // Classic=-1, Dark=0, Light=1, Custom=2
@@ -54,9 +54,12 @@ if (parameter_count() == 2) {
 
 // Run Scratch Everywhere!
 if (_scratch_game != "") {
-  window_set_caption(filename_name(_scratch_game));
-  // The Window Handle Argument must be a String-Wrapped Int64 - Use string(int64(window_handle())) for the Game Window:
-  var _scratch_everywhere_window = scratch_everywhere_create(_scratch_game, window_get_caption(), string(int64(window_handle())));
+  scratch_everywhere_set_resizable(false);
+  scratch_everywhere_set_caption(filename_name(_scratch_game));
+  scratch_everywhere_set_size(window_get_width(), window_get_height());
+  var _scratch_everywhere_owner_window = string(int64(window_handle()));
+  scratch_everywhere_set_owner( _scratch_everywhere_owner_window);
+  var _scratch_everywhere_window = scratch_everywhere_create(_scratch_game);
   /** 
    * scratch_everywhere_step() returns bool:bool
    * first bool is whether to continue main loop
