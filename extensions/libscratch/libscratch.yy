@@ -45,6 +45,7 @@
       ],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[
         {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"libscratch.dylib","TargetMask":1,},
         {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"libscratch.so","TargetMask":7,},
+        {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"libscratch_arm.so","TargetMask":7,},
         {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"libscratch_arm64.so","TargetMask":7,},
       ],"uncompress":false,"usesRunnerInterface":false,},
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libscratch.zip","constants":[],"copyToTargets":0,"filename":"libscratch.zip","final":"","functions":[],"init":"","kind":4,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
