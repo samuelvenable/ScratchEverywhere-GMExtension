@@ -24,8 +24,8 @@ if (_scratch_game != "") {
    * second bool is whether it exited with error
    */
   while (true) {
-    var _code = string_split(scratch_everywhere_step(), ":", true, 1);
-    if (_code[0] != undefined && !bool(int64((_code[0])))) {
+    var _code = string_split(scratch_everywhere_step(), ":", false, 1);
+    if (_code[0] != "" && !bool(int64((_code[0])))) {
       // Wrap Things Up:
       scratch_everywhere_destroy();
     }
